@@ -1,287 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube Translator</title>
+    <title>Youtube Clone</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <script defer src="script.js"></script>
-
-    <link rel="stylesheet" href="index.css">
-    <style>
-        * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/*header*/
-:root {
-    --red: #045b9e;
-    --offwhite: #FAF9F6;
-}
-
-.header {
-    background-color: var(--red);
-
-}
-
-.navbar {
-    display: flex;
-    background-color: var(--red);
-    padding: 5px 80px;
-    max-width: 90%;
-    margin: auto;
-
-}
-
-.logo {
-    padding: 5px 50px;
-    font-family: 'verdana', sans-serif;
-    font-weight: 300;
-    font-size: 1.2em;
-
-
-}
-
-.logo a {
-    text-decoration: none;
-    color: white;
-}
-
-.navbar ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    
-
-}
-
-.navbar ul li {
-    list-style-type: none;
-    margin-left: 20px;
-}
-
-.navbar ul li a {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    text-decoration: none;
-}
-
-.navbar ul li a:hover {
-    font-weight: 600;
-    color: yellow;
-}
-
-
-
-
-/*section*/
-
-section {
-    height: 600px;
-    width: 80%;
-    background-color: var(--offwhite);
-    margin: 20px auto;
-}
-
-
-
-/*section searchbar*/
-
-.searchbar {
-    display: flex;
-    padding: 20px;
-    justify-content: center;
-
-}
-
-.searchbar form {
-    width: 40%;
-
-}
-
-input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    border: 3px solid black;
-}
-
-.searchbar button {
-    padding: 8px 15px;
-    background-color: black;
-    color: white;
-    display: inline-block;
-    width: 20%;
-    font-size: 1.1em;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.searchbar button:hover{
-    color: yellow;
-    padding: 14px 36px;
-}
-
-
-
-/*section-explain*/
-.explain {
-    width: 95%;
-    height: 600px;
-    background-color: var(--offwhite);
-    margin: auto;
-}
-
-.title1 {
-    display: block;
-    text-align: center;
-    font-family: roboto;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-
-}
-
-.explain p {
-
-    text-align: center;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.explain ul {
-    display: flex;
-
-}
-
-.explain ul li {
-    list-style-type: none;
-    display: table-row;
-    text-align: center;
-    width: 33%;
-    display: table-cell;
-    justify-content: center;
-    height: 150px;
-    margin: 10px 20px;
-    background-color: rgb(180, 179, 178);
-}
-
-.explain ul li h3 {
-    margin-top: 10px;
-}
-
-.explain ul li p {
-    margin-top: 10px;
-}
-
-
-
-/*footer*/
-footer {
-    margin-top: 25px;
-    background-color: var(--red);;
-}
-
-.copyright {
-    width: 80%;
-    margin: auto;
-    padding: 30px 0;
-    height: 120px;
-    background-color: var(--red);
-
-
-}
-
-.copyright ul {
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-
-
-}
-
-.copyright ul li {
-    list-style-type: none;
-    padding: 10px 0;
-
-
-}
-
-.copyright ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-    font-family: poppins;
-
-}
-
-.copyright ul li a:hover {
-    font-size: 1.2em;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
-    <div class="header">
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html">Youtube &nbsp;
-                    Translator</a>
-            </div>
-            <ul>
 
-                <li><a href="index.html">Translate Video</a></li>
-                <div class="dropdown">
-                  
-                   
-                </div>
-            </ul>
-
+    <nav class="navbar">
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+        <img src="img/logo.PNG" class="logo" alt="">
+        <div class="search-box">
+            <input type="text" class="search-bar" placeholder="search">
+            <button class="search-btn"><img src="img/search.PNG" alt=""></button>
+        </div>
+        <div class="user-options">
+            <img src="img/video.PNG" class="icon" alt="">
+            <img src="img/grid.PNG" class="icon" alt="">
+            <img src="img/bell.PNG" class="icon" alt="">
+            <div class="user-dp">
+                <img src="img/profile-pic.png" alt="">
+            </div>
+        </div>
+    </nav>
 
+    <!-- sidebar -->
+    <div class="side-bar">
+        <a href="#" class="links active"><img src="img/home.PNG" alt="">home</a>
+        <a href="#" class="links"><img src="img/explore.PNG" alt="">explore</a>
+        <a href="#" class="links"><img src="img/subscription.PNG" alt="">subscription</a>
+        <hr class="seperator">
+        <a href="#" class="links"><img src="img/library.PNG" alt="">library</a>
+        <a href="#" class="links"><img src="img/history.PNG" alt="">history</a>
+        <a href="#" class="links"><img src="img/your-video.PNG" alt="">your video</a>
+        <a href="#" class="links"><img src="img/watch-later.PNG" alt="">watch leater</a>
+        <a href="#" class="links"><img src="img/liked video.PNG" alt="">like video</a>
+        <a href="#" class="links"><img src="img/show more.PNG" alt="">show more</a>
     </div>
 
-    <section>
+    <!-- filters -->
+    <div class="filters">
+        <button class="filter-options active">all</button>
+        <button class="filter-options">CSS</button>
+        <button class="filter-options">web development</button>
+        <button class="filter-options">python</button>
+        <button class="filter-options">entertainment</button>
+        <button class="filter-options">marvel</button>
+        <button class="filter-options">javascript</button>
+        <button class="filter-options">artificial intelligence</button>
+        <button class="filter-options">machine learning</button>
+        <button class="filter-options">trending</button>
+    </div>
 
-        <div class="title">
-            <h1>Enter the video link to translate</h1>
-        </div>
-        <div class="searchbar">
-            <form action="/" method="post">
-                <input type="text" name="link">
-                <button type="submit">Submit</button>
+    <!-- videos -->
+    <div class="video-container">
+        <!-- <div class="video">
+            <img src="img/profile-pic.png" class="thumbnail" alt="">
+            <div class="content">
+                <img src="img/profile-pic.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">youtube clone 2021 | create working youtube clone</h4>
+                    <p class="channel-name">modern web</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
 
-            </form>
-
-        </div>
-        <div id="alert"></div>
-        <div class="explain">
-            <h2 class="title1">
-                Translate Video with one click
-            </h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam vitae aperiam natus esse laboriosam suscipit, quibusdam beatae, aut quaerat totam illum possimus animi corrupti explicabo cumque dolorum expedita doloribus quo.
-
-            </p>
-         
-        </div>
-    </section>
-    <footer>
-        <div class="copyright">
-            <ul>
-                
-            </ul>
-        </div>
-    </footer>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="app.js"></script>
+    
 </body>
-
 </html>

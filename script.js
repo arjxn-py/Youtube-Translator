@@ -38,7 +38,8 @@ app.post('/', (req, res) => {
 
 
     /*api get*/
-    url = `https://www.googleapis.com/youtube/v3/videos?key=AIzaSyCOX16PRRHc9ppREA_kWf3PlTvu2oveSdM&part=snippet&id=${final_link}`
+    url = `https://www.googleapis.com/youtube/v3/videos?key=
+AIzaSyCPWMPAp1bgYvBDzIqZCh5oCr5nldAP2sI&part=snippet&id=${final_link}`
 
     https.get(url, response => {
 
